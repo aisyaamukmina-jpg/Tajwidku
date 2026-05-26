@@ -1,0 +1,156 @@
+/* ===== VARIABEL WARNA ===== */
+:root {
+    --primary: #0F2A44;
+    --secondary: #2F80ED;
+    --accent: #F2C94C;
+    --bg: #F7F9FC;
+    --card: #FFFFFF;
+    --text: #1A1A1A;
+    --text-light: #6B7280;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.img-fallback {
+    display: none;
+    background: #ccc;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    background: var(--secondary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: var(--primary);
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 50px 0;
+}
+
+.alt {
+    background: var(--card);
+}
+
+/* ===== CARD ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== TEAM ===== */
+.team img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .hero {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

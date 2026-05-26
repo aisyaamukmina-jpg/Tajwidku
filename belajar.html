@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pusat Pembelajaran Detektif Tajwid</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="learning-header">
+    <div class="container">
+        <h1>Pusat Pembelajaran Detektif Tajwid</h1>
+        <p>
+            Halaman ini berisi materi pembelajaran ilmu tajwid yang disusun
+            secara sistematis, interaktif, dan mudah dipahami.
+        </p>
+    </div>
+</header>
+
+<!-- ================= LAYOUT LMS ================= -->
+<section class="learning-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Tombol sidebar mobile -->
+        <button class="sidebar-toggle" id="sidebarToggle">
+            ☰ Daftar Materi
+        </button>
+
+        <div class="sidebar-content">
+
+            <h3>Daftar Bab</h3>
+
+            <ul>
+                <li>
+                    <a href="#bab1">BAB 1 - Dasar-Dasar Hukum Mad</a>
+
+                    <ul class="subbab">
+                        <li><a href="#pengertian-mad">A. Pengertian Mad</a></li>
+                        <li><a href="#mad-thabii">B. Mad Thabi’i</a></li>
+                        <li><a href="#mad-badal">C. Mad Badal</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#bab2">BAB 2 - Mad Karena Hamzah</a>
+
+                    <ul class="subbab">
+                        <li><a href="#mad-wajib">A. Mad Wajib Muttasil</a></li>
+                        <li><a href="#mad-jaiz">B. Mad Jaiz Munfasil</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#bab3">BAB 3 - Mad Karena Sukun/Waqaf</a>
+
+                    <ul class="subbab">
+                        <li><a href="#mad-aridh">A. Mad ‘Aridh Lissukun</a></li>
+                        <li><a href="#mad-lin">B. Mad Lin</a></li>
+                        <li><a href="#mad-lazim">C. Mad Lazim</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </aside>
+
+    <!-- ================= KONTEN ================= -->
+    <main class="learning-content">
+
+        <!-- ================= INTRO ================= -->
+        <section class="content-card">
+            <h2>Materi Hukum Mad</h2>
+
+            <p>
+                Materi ini membahas berbagai jenis hukum mad dalam ilmu tajwid,
+                mulai dari pengertian dasar, mad karena hamzah,
+                hingga mad karena sukun dan waqaf.
+            </p>
+
+            <img
+                src="https://i.ibb.co.com/tTFQFKSk/Poster-Makharijul-Huruf.png"
+                alt="Belajar Huruf Hijaiyah"
+                class="content-image"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+
+            <!-- Fallback gambar -->
+            <div class="image-fallback">
+                Gambar belum ditambahkan
+            </div>
+        </section>
+
+        <!-- ================= BAB 1 ================= -->
+        <section class="content-card" id="bab1">
+
+            <h2>BAB 1 - Dasar-Dasar Hukum Mad</h2>
+
+            <!-- Pengertian Mad -->
+            <div id="pengertian-mad">
+                <h3>A. Pengertian Mad</h3>
+
+                <p>
+                    Kata mad (مد) artinya memanjangkan bacaan.
+                </p>
+
+                <h4>Huruf Mad Ada 3:</h4>
+
+                <ul>
+                    <li>ا (alif)</li>
+                    <li>و (wawu sukun)</li>
+                    <li>ي (ya sukun)</li>
+                </ul>
+
+                <p>
+                    Panjang bacaan dihitung menggunakan harakat:
+                </p>
+
+                <ul>
+                    <li>2 harakat = pendek normal</li>
+                    <li>4–6 harakat = lebih panjang</li>
+                </ul>
+            </div>
+
+            <!-- Mad Thabii -->
+            <div id="mad-thabii">
+                <h3>B. Mad Thabi’i (Mad Asli)</h3>
+
+                <p>
+                    Mad Thabi’i adalah mad paling dasar dan paling sering ditemukan.
+                </p>
+
+                <h4>Ciri-ciri:</h4>
+
+                <ul>
+                    <li>Fathah + alif (ـَا)</li>
+                    <li>Dhammah + wawu sukun (ـُو)</li>
+                    <li>Kasrah + ya sukun (ـِي)</li>
+                </ul>
+
+                <p>
+                    Panjang bacaan: <strong>2 harakat</strong>
+                </p>
+
+                <h4>Contoh:</h4>
+
+                <ul>
+                    <li>قَالَ → qālaa</li>
+                    <li>يَقُولُ → yaqūlu</li>
+                    <li>فِي → fī</li>
+                </ul>
+
+                <div class="note-box">
+                    <strong>Tips:</strong>
+                    Mad Thabi’i = mad normal yang belum bertemu hamzah atau sukun.
+                </div>
+            </div>
+
+            <!-- Mad Badal -->
+            <div id="mad-badal">
+                <h3>C. Mad Badal</h3>
+
+                <p>
+                    Terjadi ketika hamzah bertemu huruf mad.
+                </p>
+
+                <p>
+                    Panjang bacaan: <strong>2 harakat</strong>
+                </p>
+
+                <h4>Contoh:</h4>
+
+                <ul>
+                    <li>آمَنُوا</li>
+                    <li>إِيمَانًا</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- ================= BAB 2 ================= -->
+        <section class="content-card" id="bab2">
+
+            <h2>BAB 2 - Mad Karena Hamzah</h2>
+
+            <!-- Mad Wajib -->
+            <div id="mad-wajib">
+
+                <h3>A. Mad Wajib Muttasil</h3>
+
+                <p>
+                    “Wajib” berarti harus panjang,
+                    sedangkan “Muttasil” berarti bersambung dalam satu kata.
+                </p>
+
+                <p>
+                    Terjadi ketika huruf mad bertemu hamzah dalam satu kata.
+                </p>
+
+                <p>
+                    Panjang bacaan: <strong>4–5 harakat</strong>
+                </p>
+
+                <h4>Contoh:</h4>
+
+                <ul>
+                    <li>جَاءَ</li>
+                    <li>السَّمَاءِ</li>
+                </ul>
+
+            </div>
+
+            <!-- Mad Jaiz -->
+            <div id="mad-jaiz">
+
+                <h3>B. Mad Jaiz Munfasil</h3>
+
+                <p>
+                    “Jaiz” berarti boleh,
+                    sedangkan “Munfasil” berarti terpisah.
+                </p>
+
+                <p>
+                    Terjadi ketika huruf mad di akhir kata
+                    bertemu hamzah di awal kata berikutnya.
+                </p>
+
+                <p>
+                    Panjang bacaan: <strong>4–5 harakat</strong>
+                </p>
+
+                <h4>Contoh:</h4>
+
+                <ul>
+                    <li>فِي أَنْفُسِكُمْ</li>
+                    <li>إِنَّا أَعْطَيْنَاكَ</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- ================= BAB 3 ================= -->
+        <section class="content-card" id="bab3">
+
+            <h2>BAB 3 - Mad Karena Sukun/Waqaf</h2>
+
+            <!-- Mad Aridh -->
+            <div id="mad-aridh">
+
+                <h3>A. Mad ‘Aridh Lissukun</h3>
+
+                <p>
+                    Terjadi ketika mad thabi’i bertemu huruf hidup,
+                    lalu dibaca berhenti (waqaf) sehingga menjadi sukun.
+                </p>
+
+                <p>
+                    Panjang bacaan boleh:
+                </p>
+
+                <ul>
+                    <li>2 harakat</li>
+                    <li>4 harakat</li>
+                    <li>6 harakat</li>
+                </ul>
+
+                <h4>Contoh:</h4>
+
+                <p class="arabic-text">
+                    الْعَالَمِينَْ
+                </p>
+
+            </div>
+
+            <!-- Mad Lin -->
+            <div id="mad-lin">
+
+                <h3>B. Mad Lin</h3>
+
+                <p>
+                    Terjadi ketika ada wawu sukun atau ya sukun
+                    yang sebelumnya terdapat fathah lalu waqaf.
+                </p>
+
+                <h4>Contoh:</h4>
+
+                <ul>
+                    <li>خَوْفْ</li>
+                    <li>بَيْتْ</li>
+                </ul>
+
+                <p>
+                    Panjang bacaan:
+                    2, 4, atau 6 harakat.
+                </p>
+
+            </div>
+
+            <!-- Mad Lazim -->
+            <div id="mad-lazim">
+
+                <h3>C. Mad Lazim</h3>
+
+                <p>
+                    Mad Lazim adalah mad paling panjang dan wajib dibaca panjang.
+                </p>
+
+                <p>
+                    Terjadi ketika huruf mad bertemu sukun asli.
+                </p>
+
+                <p>
+                    Panjang bacaan:
+                    <strong>6 harakat</strong>
+                </p>
+
+                <h4>Contoh:</h4>
+
+                <p class="arabic-text">
+                    الضَّالِّينَ
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= VIDEO ================= -->
+        <section class="content-card">
+
+            <h2>Video Pembelajaran</h2>
+
+            <p>
+                Berikut contoh video pembelajaran tajwid
+                yang dapat membantu memahami materi dengan lebih interaktif.
+            </p>
+
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/4powvv57gdY"
+                    title="Video Pembelajaran Tajwid"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </section>
+
+    </main>
+
+</section>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+
+    // ================= SIDEBAR MOBILE =================
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const sidebar = document.getElementById("sidebar");
+
+    sidebarToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+    });
+
+    // ================= SMOOTH SCROLL =================
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
