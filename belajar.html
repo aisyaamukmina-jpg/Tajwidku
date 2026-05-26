@@ -6,29 +6,250 @@
 
     <title>Pusat Pembelajaran Detektif Tajwid</title>
 
-    <!-- Menghubungkan CSS -->
+    <!-- CSS Utama -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ================= LMS LAYOUT ================= */
+
+        .learning-header{
+            background: var(--primary);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .learning-header h1{
+            margin-bottom: 15px;
+        }
+
+        .learning-layout{
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar{
+            width: 300px;
+            background: var(--card);
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h3{
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul{
+            list-style: none;
+        }
+
+        .sidebar ul li{
+            margin-bottom: 15px;
+        }
+
+        .sidebar a{
+            text-decoration: none;
+            color: var(--text);
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover{
+            color: var(--secondary);
+        }
+
+        .subbab{
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        .subbab li{
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .learning-content{
+            flex: 1;
+            padding: 40px;
+        }
+
+        .content-card{
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .content-card h2{
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .content-card h3{
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .content-card h4{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-card p{
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .content-card ul{
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-card li{
+            margin-bottom: 10px;
+        }
+
+        /* ================= BOX CATATAN ================= */
+
+        .note-box{
+            background: #fff7d6;
+            border-left: 5px solid var(--accent);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* ================= ARABIC TEXT ================= */
+
+        .arabic-text{
+            font-size: 28px;
+            direction: rtl;
+            text-align: right;
+            margin: 20px 0;
+            color: var(--primary);
+        }
+
+        /* ================= IMAGE ================= */
+
+        .content-image{
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 20px;
+            object-fit: cover;
+            max-height: 400px;
+        }
+
+        .image-fallback{
+            display: none;
+            background: #ddd;
+            padding: 40px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* ================= VIDEO ================= */
+
+        .video-wrapper{
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .video-wrapper iframe{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            border:none;
+        }
+
+        /* ================= MOBILE ================= */
+
+        .sidebar-toggle{
+            display: none;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        @media(max-width: 900px){
+
+            .learning-layout{
+                flex-direction: column;
+            }
+
+            .sidebar{
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .learning-content{
+                padding: 20px;
+            }
+
+            .sidebar-toggle{
+                display: block;
+            }
+
+            .sidebar-content{
+                display: none;
+            }
+
+            .sidebar.active .sidebar-content{
+                display: block;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
 <!-- ================= HEADER ================= -->
+
 <header class="learning-header">
     <div class="container">
+
         <h1>Pusat Pembelajaran Detektif Tajwid</h1>
+
         <p>
-            Halaman ini berisi materi pembelajaran ilmu tajwid yang disusun
-            secara sistematis, interaktif, dan mudah dipahami.
+            Halaman ini berisi materi pembelajaran sifat-sifat huruf
+            dalam ilmu tajwid yang disusun secara sistematis,
+            interaktif, dan mudah dipahami.
         </p>
+
     </div>
 </header>
 
 <!-- ================= LAYOUT LMS ================= -->
+
 <section class="learning-layout">
 
     <!-- ================= SIDEBAR ================= -->
+
     <aside class="sidebar" id="sidebar">
 
-        <!-- Tombol sidebar mobile -->
         <button class="sidebar-toggle" id="sidebarToggle">
             ☰ Daftar Materi
         </button>
@@ -38,50 +259,58 @@
             <h3>Daftar Bab</h3>
 
             <ul>
+
                 <li>
-                    <a href="#bab1">BAB 1 - Dasar-Dasar Hukum Mad</a>
+                    <a href="#bab1">BAB 1 - Pengertian Sifat Huruf</a>
 
                     <ul class="subbab">
-                        <li><a href="#pengertian-mad">A. Pengertian Mad</a></li>
-                        <li><a href="#mad-thabii">B. Mad Thabi’i</a></li>
-                        <li><a href="#mad-badal">C. Mad Badal</a></li>
+                        <li><a href="#pengertian">A. Pengertian Sifat Huruf</a></li>
+                        <li><a href="#hubungan">B. Hubungan Makhraj dan Sifat Huruf</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#bab2">BAB 2 - Mad Karena Hamzah</a>
+                    <a href="#bab2">BAB 2 - Sifat Lazim Huruf</a>
 
                     <ul class="subbab">
-                        <li><a href="#mad-wajib">A. Mad Wajib Muttasil</a></li>
-                        <li><a href="#mad-jaiz">B. Mad Jaiz Munfasil</a></li>
+                        <li><a href="#jahr">1. Jahr</a></li>
+                        <li><a href="#hams">2. Hams</a></li>
+                        <li><a href="#syiddah">3. Syiddah</a></li>
+                        <li><a href="#rakhawah">4. Rakhawah</a></li>
+                        <li><a href="#tawassuth">5. Tawassuth</a></li>
+                        <li><a href="#qalqalah">6. Qalqalah</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#bab3">BAB 3 - Mad Karena Sukun/Waqaf</a>
+                    <a href="#bab3">BAB 3 - Sifat ‘Aridh Huruf</a>
 
                     <ul class="subbab">
-                        <li><a href="#mad-aridh">A. Mad ‘Aridh Lissukun</a></li>
-                        <li><a href="#mad-lin">B. Mad Lin</a></li>
-                        <li><a href="#mad-lazim">C. Mad Lazim</a></li>
+                        <li><a href="#tafkhim">B. Tafkhim</a></li>
+                        <li><a href="#tarqiq">C. Tarqiq</a></li>
                     </ul>
                 </li>
+
             </ul>
 
         </div>
+
     </aside>
 
-    <!-- ================= KONTEN ================= -->
+    <!-- ================= MAIN CONTENT ================= -->
+
     <main class="learning-content">
 
         <!-- ================= INTRO ================= -->
+
         <section class="content-card">
-            <h2>Materi Hukum Mad</h2>
+
+            <h2>Materi Sifat-Sifat Huruf</h2>
 
             <p>
-                Materi ini membahas berbagai jenis hukum mad dalam ilmu tajwid,
-                mulai dari pengertian dasar, mad karena hamzah,
-                hingga mad karena sukun dan waqaf.
+                Materi ini membahas berbagai sifat huruf dalam ilmu tajwid,
+                mulai dari pengertian sifat huruf,
+                sifat lazim, hingga tafkhim dan tarqiq.
             </p>
 
             <img
@@ -91,262 +320,227 @@
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
             >
 
-            <!-- Fallback gambar -->
             <div class="image-fallback">
                 Gambar belum ditambahkan
             </div>
+
         </section>
 
         <!-- ================= BAB 1 ================= -->
+
         <section class="content-card" id="bab1">
 
-            <h2>BAB 1 - Dasar-Dasar Hukum Mad</h2>
+            <h2>BAB 1 – Pengertian Sifat Huruf dalam Ilmu Tajwid</h2>
 
-            <!-- Pengertian Mad -->
-            <div id="pengertian-mad">
-                <h3>A. Pengertian Mad</h3>
+            <div id="pengertian">
 
-                <p>
-                    Kata mad (مد) artinya memanjangkan bacaan.
-                </p>
-
-                <h4>Huruf Mad Ada 3:</h4>
-
-                <ul>
-                    <li>ا (alif)</li>
-                    <li>و (wawu sukun)</li>
-                    <li>ي (ya sukun)</li>
-                </ul>
+                <h3>A. Pengertian Sifat Huruf</h3>
 
                 <p>
-                    Panjang bacaan dihitung menggunakan harakat:
+                    Sifat huruf adalah karakter atau keadaan
+                    yang melekat pada huruf hijaiyah ketika diucapkan.
                 </p>
-
-                <ul>
-                    <li>2 harakat = pendek normal</li>
-                    <li>4–6 harakat = lebih panjang</li>
-                </ul>
-            </div>
-
-            <!-- Mad Thabii -->
-            <div id="mad-thabii">
-                <h3>B. Mad Thabi’i (Mad Asli)</h3>
 
                 <p>
-                    Mad Thabi’i adalah mad paling dasar dan paling sering ditemukan.
+                    Jika makhraj menjelaskan dari mana huruf keluar,
+                    maka sifat huruf menjelaskan bagaimana cara huruf diucapkan.
                 </p>
-
-                <h4>Ciri-ciri:</h4>
-
-                <ul>
-                    <li>Fathah + alif (ـَا)</li>
-                    <li>Dhammah + wawu sukun (ـُو)</li>
-                    <li>Kasrah + ya sukun (ـِي)</li>
-                </ul>
-
-                <p>
-                    Panjang bacaan: <strong>2 harakat</strong>
-                </p>
-
-                <h4>Contoh:</h4>
-
-                <ul>
-                    <li>قَالَ → qālaa</li>
-                    <li>يَقُولُ → yaqūlu</li>
-                    <li>فِي → fī</li>
-                </ul>
 
                 <div class="note-box">
-                    <strong>Tips:</strong>
-                    Mad Thabi’i = mad normal yang belum bertemu hamzah atau sukun.
+                    Dengan memahami sifat huruf,
+                    seseorang dapat membaca Al-Qur’an dengan lebih fasih
+                    dan menghindari kesalahan pelafalan.
                 </div>
+
             </div>
 
-            <!-- Mad Badal -->
-            <div id="mad-badal">
-                <h3>C. Mad Badal</h3>
+            <div id="hubungan">
+
+                <h3>B. Hubungan Makhraj dan Sifat Huruf</h3>
 
                 <p>
-                    Terjadi ketika hamzah bertemu huruf mad.
+                    Makhraj dan sifat huruf saling berkaitan.
+                    Makhraj menentukan tempat keluarnya huruf,
+                    sedangkan sifat menentukan karakter suara huruf.
                 </p>
 
                 <p>
-                    Panjang bacaan: <strong>2 harakat</strong>
+                    Contoh:
                 </p>
-
-                <h4>Contoh:</h4>
 
                 <ul>
-                    <li>آمَنُوا</li>
-                    <li>إِيمَانًا</li>
+                    <li>Huruf ص dibaca tebal karena tafkhim</li>
+                    <li>Huruf س dibaca tipis karena tarqiq</li>
                 </ul>
+
             </div>
 
         </section>
 
         <!-- ================= BAB 2 ================= -->
+
         <section class="content-card" id="bab2">
 
-            <h2>BAB 2 - Mad Karena Hamzah</h2>
+            <h2>BAB 2 – Sifat Lazim Huruf</h2>
 
-            <!-- Mad Wajib -->
-            <div id="mad-wajib">
-
-                <h3>A. Mad Wajib Muttasil</h3>
+            <div id="jahr">
+                <h3>1. Jahr (الجهر)</h3>
 
                 <p>
-                    “Wajib” berarti harus panjang,
-                    sedangkan “Muttasil” berarti bersambung dalam satu kata.
+                    Jahr adalah sifat huruf yang pengucapannya kuat
+                    sehingga napas tertahan.
                 </p>
 
-                <p>
-                    Terjadi ketika huruf mad bertemu hamzah dalam satu kata.
-                </p>
+                <h4>Contoh Huruf:</h4>
 
-                <p>
-                    Panjang bacaan: <strong>4–5 harakat</strong>
+                <p class="arabic-text">
+                    ب، د، ج، ض، ظ، ع
                 </p>
-
-                <h4>Contoh:</h4>
 
                 <ul>
-                    <li>جَاءَ</li>
-                    <li>السَّمَاءِ</li>
+                    <li>Suara terdengar jelas dan kuat</li>
+                    <li>Napas tidak mengalir</li>
                 </ul>
-
             </div>
 
-            <!-- Mad Jaiz -->
-            <div id="mad-jaiz">
-
-                <h3>B. Mad Jaiz Munfasil</h3>
+            <div id="hams">
+                <h3>2. Hams (الهمس)</h3>
 
                 <p>
-                    “Jaiz” berarti boleh,
-                    sedangkan “Munfasil” berarti terpisah.
+                    Hams adalah sifat huruf yang menyebabkan
+                    napas mengalir saat diucapkan.
                 </p>
 
-                <p>
-                    Terjadi ketika huruf mad di akhir kata
-                    bertemu hamzah di awal kata berikutnya.
+                <p class="arabic-text">
+                    فَحَثَّهُ شَخْصٌ سَكَتْ
                 </p>
-
-                <p>
-                    Panjang bacaan: <strong>4–5 harakat</strong>
-                </p>
-
-                <h4>Contoh:</h4>
 
                 <ul>
-                    <li>فِي أَنْفُسِكُمْ</li>
-                    <li>إِنَّا أَعْطَيْنَاكَ</li>
+                    <li>Ada hembusan napas</li>
+                    <li>Suara lebih ringan</li>
                 </ul>
+            </div>
+
+            <div id="syiddah">
+                <h3>3. Syiddah (الشدة)</h3>
+
+                <p>
+                    Syiddah adalah sifat huruf
+                    yang pengucapannya tertahan kuat di makhrajnya.
+                </p>
+
+                <p class="arabic-text">
+                    أَجِدْ قَطٍ بَكَتْ
+                </p>
+            </div>
+
+            <div id="rakhawah">
+                <h3>4. Rakhawah (الرخاوة)</h3>
+
+                <p>
+                    Rakhawah adalah sifat huruf
+                    yang suara dan napasnya mengalir.
+                </p>
+            </div>
+
+            <div id="tawassuth">
+                <h3>5. Tawassuth (التوسط)</h3>
+
+                <p class="arabic-text">
+                    لِنْ عُمَر
+                </p>
+
+                <ul>
+                    <li>Suara tidak terlalu tertahan</li>
+                    <li>Tidak terlalu mengalir</li>
+                </ul>
+            </div>
+
+            <div id="qalqalah">
+                <h3>6. Qalqalah (القلقلة)</h3>
+
+                <p>
+                    Qalqalah adalah sifat memantul
+                    pada huruf tertentu ketika sukun.
+                </p>
+
+                <p class="arabic-text">
+                    قُطْبُ جَدٍ
+                </p>
 
             </div>
 
         </section>
 
         <!-- ================= BAB 3 ================= -->
+
         <section class="content-card" id="bab3">
 
-            <h2>BAB 3 - Mad Karena Sukun/Waqaf</h2>
+            <h2>BAB 3 – Sifat ‘Aridh Huruf</h2>
 
-            <!-- Mad Aridh -->
-            <div id="mad-aridh">
+            <div id="tafkhim">
 
-                <h3>A. Mad ‘Aridh Lissukun</h3>
+                <h3>B. Tafkhim (التفخيم)</h3>
 
                 <p>
-                    Terjadi ketika mad thabi’i bertemu huruf hidup,
-                    lalu dibaca berhenti (waqaf) sehingga menjadi sukun.
+                    Tafkhim adalah membaca huruf
+                    dengan suara tebal atau berat.
                 </p>
 
-                <p>
-                    Panjang bacaan boleh:
+                <p class="arabic-text">
+                    خُصَّ ضَغْطٍ قِظْ
                 </p>
 
                 <ul>
-                    <li>2 harakat</li>
-                    <li>4 harakat</li>
-                    <li>6 harakat</li>
+                    <li>Suara terdengar tebal</li>
+                    <li>Rongga mulut terasa penuh</li>
                 </ul>
-
-                <h4>Contoh:</h4>
-
-                <p class="arabic-text">
-                    الْعَالَمِينَْ
-                </p>
 
             </div>
 
-            <!-- Mad Lin -->
-            <div id="mad-lin">
+            <div id="tarqiq">
 
-                <h3>B. Mad Lin</h3>
+                <h3>C. Tarqiq (الترقيق)</h3>
 
                 <p>
-                    Terjadi ketika ada wawu sukun atau ya sukun
-                    yang sebelumnya terdapat fathah lalu waqaf.
+                    Tarqiq adalah membaca huruf
+                    dengan suara tipis atau ringan.
                 </p>
-
-                <h4>Contoh:</h4>
 
                 <ul>
-                    <li>خَوْفْ</li>
-                    <li>بَيْتْ</li>
+                    <li>Suara ringan</li>
+                    <li>Tidak ditebalkan</li>
                 </ul>
-
-                <p>
-                    Panjang bacaan:
-                    2, 4, atau 6 harakat.
-                </p>
 
             </div>
 
-            <!-- Mad Lazim -->
-            <div id="mad-lazim">
-
-                <h3>C. Mad Lazim</h3>
-
-                <p>
-                    Mad Lazim adalah mad paling panjang dan wajib dibaca panjang.
-                </p>
-
-                <p>
-                    Terjadi ketika huruf mad bertemu sukun asli.
-                </p>
-
-                <p>
-                    Panjang bacaan:
-                    <strong>6 harakat</strong>
-                </p>
-
-                <h4>Contoh:</h4>
-
-                <p class="arabic-text">
-                    الضَّالِّينَ
-                </p>
-
+            <div class="note-box">
+                Memahami tafkhim dan tarqiq sangat penting
+                agar bacaan Al-Qur’an tetap benar,
+                indah, dan sesuai kaidah tajwid.
             </div>
 
         </section>
 
         <!-- ================= VIDEO ================= -->
+
         <section class="content-card">
 
             <h2>Video Pembelajaran</h2>
 
             <p>
-                Berikut contoh video pembelajaran tajwid
-                yang dapat membantu memahami materi dengan lebih interaktif.
+                Berikut video pembelajaran tambahan
+                untuk membantu memahami sifat-sifat huruf.
             </p>
 
             <div class="video-wrapper">
+
                 <iframe
                     src="https://www.youtube.com/embed/4powvv57gdY"
-                    title="Video Pembelajaran Tajwid"
+                    title="Video Pembelajaran"
                     allowfullscreen>
                 </iframe>
+
             </div>
 
         </section>
@@ -356,20 +550,25 @@
 </section>
 
 <!-- ================= SCRIPT ================= -->
+
 <script>
 
-    // ================= SIDEBAR MOBILE =================
+    // ================= TOGGLE SIDEBAR MOBILE =================
+
     const sidebarToggle = document.getElementById("sidebarToggle");
     const sidebar = document.getElementById("sidebar");
 
-    sidebarToggle.addEventListener("click", function () {
+    sidebarToggle.addEventListener("click", function(){
+
         sidebar.classList.toggle("active");
+
     });
 
     // ================= SMOOTH SCROLL =================
+
     document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-        link.addEventListener("click", function (e) {
+        link.addEventListener("click", function(e){
 
             e.preventDefault();
 
